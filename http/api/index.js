@@ -27,11 +27,11 @@ http.createServer((req, res) => {
     if(!name || !url) return res.end(JSON.stringify(data))
 
     if(del){
-        data.urls = data.urls.filter(item => String(item.url) !== String(url))
-        return writeFile((message) => {res.end(message)}) 
+        data.urls = data.urls.filter(item => ( String(item.url) !== String(url) ))
+        return writeFile((message) => res.end(message)) 
+    } else {
+        data.urls.push({name, url})
     }
-
-    data.urls.push(name, url)
 
     return writeFile((message) => res.end(message))
 }).listen(3000, () => console.log('Api is running') )

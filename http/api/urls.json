@@ -1,12 +1,8 @@
 {
-    "urls": [
-        {
-            "name": "Rocketseat",
-            "url": "http://rocketseat.com.br"
-        },
-        {
-            "name": "Google",
-            "url": "http://google.com"
-        }
-    ]
+  "urls": [
+    {
+      "name": "teste",
+      "url": "http://teste.com"
+    }
+  ]
 }
